@@ -17,18 +17,45 @@
     top: calc(50% - 1em - 15px);
 }
 
-.advisor-static .nav a {
-    color: #1B1B1B;
+.advisor-static .nav-item a {
+    color: #1B1B1B !important;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     padding: 15px;
 }
+.advisor-static .dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: 0 8px 10px 0 rgba(0,114,202,0.3);
+}
+
+.advisor-static .dropdown-menu a{
+    
+    border-top: 1px solid #DFDFDF;
+}
+.dropdown-menu {
+    display: block;
+}
+
+.navbar-nav .dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+
+.navbar-nav .dropdown-menu.show {
+    max-height: 300px;
+}
 
 
 
-.advisor-static .button-vyzkum {
+    .advisor-static .nav-item a:hover {
+        color: #0072CA !important;
+    }
+    .advisor-static .button-vyzkum {
     color: #B51515;
     border: 2px solid #B51515;
     border-radius: 100px;
@@ -126,7 +153,7 @@
     color: #1B1B1B;
 }
 
-.advisor-static a, .advisor-static a:visited, .advisor-static a:hover, .advisor-static a:active {
+ .advisor-static a:visited, .advisor-static a:hover, .advisor-static a:active {
     color: inherit;
 }
 
@@ -187,6 +214,9 @@ body {
 
 .advisor-static a.learn-more {
     color: #2C99ED;
+}
+.advisor-static a.learn-more:hover {
+    color: #002aca;
 }
 
 html .advisor-static a:active, html .advisor-static a:focus {
@@ -263,45 +293,49 @@ html .advisor-static a:active, html .advisor-static a:focus {
     line-height: 21px;
     text-align: center;
 }
-    .advisor-static .in-the-app-content .content-description .content-heading {
-        color: #1B1B1B;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 2px;
-        line-height: 24px;
-        text-align: center;
-    }
-.advisor-static .in-the-app-content .content-description{
-    text-align:center;
-}
-.advisor-static .in-the-app-content .content-description .content-text {
-    color: #9B9B9B;
-    font-size: 18px;
-    line-height: 28px;
+
+.advisor-static .in-the-app-content .content-description .content-heading {
+    color: #1B1B1B;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    line-height: 24px;
     text-align: center;
-    margin-bottom:10px;
 }
+
+.advisor-static .in-the-app-content .content-description {
+    text-align: center;
+}
+
+    .advisor-static .in-the-app-content .content-description .content-text {
+        color: #9B9B9B;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
 .advisor-static .in-the-app-content .head-img {
     height: 6.8em;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: center;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
-h3.in-the-app{
-    margin-bottom:20px;
-}
-.advisor-static .in-the-app-content {
 
-    margin-bottom:30px;
+h3.in-the-app {
+    margin-bottom: 20px;
 }
+
+.advisor-static .in-the-app-content {
+    margin-bottom: 30px;
+}
+
 .advisor-static .target-group, .advisor-static .general-header {
     font-size: 40px;
     font-weight: 600;
     line-height: 60px;
     text-align: center;
-
-
 }
 
 .advisor-static .people-description .head-img {
@@ -318,6 +352,7 @@ h3.in-the-app{
     font-weight: 600;
     line-height: 34px;
 }
+
 .people-description p {
     color: #9B9B9B;
     font-family: Roboto;
@@ -346,19 +381,31 @@ h3.in-the-app{
     line-height: 28px;
     padding: 15px 60px 15px 60px;
     position: relative;
-    width:90%;
+    width: 100%;
 }
 
 
 
-.advisor-static .fill-button:hover{
-    opacity: 0.8;
+.advisor-static .fill-button:hover {
+    background-color: #2d87cd;
+    border-color: #2d87cd;
 }
-    .advisor-static .outline-button:hover {
-        color: white !important;
-        background-color: #0072CA;
-        text-decoration: none;
+.advisor-static .steps-text a {
+    color: #0072CA;
+    text-decoration: underline;
+}
+
+    .advisor-static .steps-text a:hover {
+        color: #002aca;
+        text-decoration: underline;
     }
+
+
+.advisor-static .outline-button:hover {
+    color: white !important;
+    background-color: #0072CA;
+    text-decoration: none;
+}
 
 .advisor-static .outline-button.animated:hover {
     text-indent: -20px;
@@ -392,36 +439,40 @@ h3.in-the-app{
     -webkit-text-stroke: 0.5px transparent;
 }
 
- .advisor-static .types-description{
-     padding: 50px;
+.advisor-static .types-description {
+    padding: 50px;
+}
 
- }
 .advisor-static .button-wrap {
     text-align: center;
-   
 }
+
 .advisor-static .people-description {
     border: 1px solid rgba(155, 155, 155, 0.3);
     border-radius: 4px;
-    padding:0px;
+    padding: 0px;
 }
+
 .advisor-static .types-description:nth-child(2) {
     border-left: 1px solid rgba(155, 155, 155, 0.3);
     border-right: 1px solid rgba(155, 155, 155, 0.3);
     background-color: rgba(155, 155, 155, 0.05);
 }
 
-.advisor-static a.short-sides{
+.advisor-static a.short-sides {
     padding-left: 30px;
     padding-right: 30px;
 }
-.advisor-static .types-description{
+
+.advisor-static .types-description {
     min-height: 44em;
 }
-.advisor-static .types-description .content-description{
-    padding-right: 35px;
-    height:21em;
-}
+
+    .advisor-static .types-description .content-description {
+        padding-right: 35px;
+        height: 21em;
+    }
+
 .advisor-static .radio-like.highlited {
     background: #0072CA;
     padding: 8px 30px 8px 30px;
@@ -429,6 +480,7 @@ h3.in-the-app{
     border-color: rgba(0, 114, 202, 1) !important;
     opacity: 1;
 }
+
 .advisor-static .radio-like.right {
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
@@ -437,6 +489,7 @@ h3.in-the-app{
     border-right: 1.5px solid;
     border-bottom: 1.5px solid;
 }
+
 .advisor-static .radio-like.left {
     border-bottom-left-radius: 100px;
     border-top-left-radius: 100px;
@@ -445,12 +498,14 @@ h3.in-the-app{
     border-left: 1.5px solid;
     border-bottom: 1.5px solid;
 }
+
 .advisor-static .radio-like {
-    border-color: rgba(155, 155, 155, 0.6)!important;
+    border-color: rgba(155, 155, 155, 0.6) !important;
     padding: 8px 30px 8px 30px;
     color: #9B9B9B;
     opacity: 0.4;
 }
+
 .advisor-static .radio-wrap {
     margin: 50px 0px;
 }
@@ -463,6 +518,7 @@ h3.in-the-app{
     padding: 10px 16px;
     border-radius: 4px;
 }
+
 .advisor-static .contains-content table {
     box-shadow: 0px 0px 0 0.5px silver;
     border-radius: 4px;
@@ -470,24 +526,27 @@ h3.in-the-app{
     border-collapse: collapse;
     border: none;
 }
-.advisor-static .contains-content table td{
-    border-top:none;
-    border-left:none;
-    border-right:none;
-}
-    .advisor-static .contains-content table tbody tr:last-child td{
-        border-bottom:none;
+
+    .advisor-static .contains-content table td {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+
+    .advisor-static .contains-content table tbody tr:last-child td {
+        border-bottom: none;
     }
 
 
 .flip-container {
     perspective: 1000px;
 }
+
 .flipper.flipped {
     transform: rotateY(180deg);
 }
-.flip-container, .front, .back {
 
+.flip-container, .front, .back {
 }
 
 /* flip speed goes here */
@@ -516,6 +575,7 @@ h3.in-the-app{
 .back {
     transform: rotateY(180deg);
 }
+
 .package-conains-header {
     color: #000000;
     font-size: 16px;
@@ -523,42 +583,57 @@ h3.in-the-app{
     letter-spacing: 2px;
     line-height: 21px;
     text-align: center;
-    margin-bottom:60px;
+    margin-bottom: 60px;
 }
 
-.advisor-static .single-price-card{
-    text-align:center;
+.advisor-static .single-price-card {
+    text-align: center;
 }
-
-@media screen and (max-width: 576px){
-    .advisor-static .row{
-        margin-bottom:15px;
+@media (min-width: 768px) {
+    .advisor-static .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
     }
-    .advisor-static .flip-container{
-        height:61em !important;
-    }
-    .advisor-static .people-description .content-description{
-        padding-right:0;
-    }
-    .advisor-static .types-description .content-description{
-        height:unset;
+}
+@media screen and (max-width: 576px) {
+    .advisor-static .row {
+        margin-bottom: 15px;
     }
 
-    .advisor-static .types-description .button-wrap .placeholder{
-        display:none;
+    .advisor-static .flip-container {
+        height: 61em !important;
     }
-    .advisor-static .single-price-card{
+
+    .advisor-static .people-description .content-description {
+        padding-right: 0;
+    }
+
+    .advisor-static .types-description .content-description {
+        height: unset;
+    }
+
+    .advisor-static .types-description .button-wrap .placeholder {
+        display: none;
+    }
+
+    .advisor-static .single-price-card {
         margin: 20px 0px;
     }
-    .advisor-static .nahled-img{
-        height:16em;
 
+    .advisor-static .nahled-img {
+        height: 16em;
+    }
+    .advisor-static .whats-next {
+    
+        padding: 8px;
     }
 
-    }
+}
+
 .advisor-static .basic-text {
     font-size: 16px;
     line-height: 24px;
+    color: #9B9B9B;
 }
 
 .advisor-static .price-card-header {
@@ -567,7 +642,7 @@ h3.in-the-app{
     font-weight: 500;
     letter-spacing: 2px;
     line-height: 24px;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
 
 .advisor-static .price-card-header-wrap {
@@ -577,7 +652,7 @@ h3.in-the-app{
     background-color: #F2F2F2;
     padding: 20px 0px;
     border: 1px solid rgba(155, 155, 155, 0.3);
-    border-bottom:none;
+    border-bottom: none;
 }
 
 .advisor-static .price-card-wrapper {
@@ -587,16 +662,18 @@ h3.in-the-app{
     line-height: 60px;
     padding: 20px 0px;
     border: 1px solid rgba(155, 155, 155, 0.3);
-    border-top:none;
+    border-top: none;
 }
+
     .advisor-static .price-card-wrapper p {
         margin-bottom: 0;
-      
     }
+
     .advisor-static .price-card-wrapper .price-card-school-year {
         font-size: 20px;
         line-height: 30px;
     }
+
 .advisor-static .price-card-licences {
     color: #000000;
     font-size: 16px;
@@ -605,55 +682,62 @@ h3.in-the-app{
     padding: 11px 20px;
     border: 1px solid rgba(155, 155, 155, 0.3);
     border-top: none;
-    margin-bottom:0;
+    margin-bottom: 0;
 }
+
 .advisor-static .single-price-card {
     border-radius: 4px;
     background-color: #FDFDFD;
     padding: 0;
     padding: 0px 20px;
 }
+
     .advisor-static .single-price-card .wrapper {
         box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05);
     }
-    .advisor-static .price-card-resets {
-        border: 1px solid rgba(155, 155, 155, 0.3);
-        border-top: none;
-        border-bottom: none;
-        padding: 10px 0;
-        margin-bottom: 0;
-    }
+
+.advisor-static .price-card-resets {
+    border: 1px solid rgba(155, 155, 155, 0.3);
+    border-top: none;
+    border-bottom: none;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
 .advisor-static .price-card-button {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     background-color: #40BE65;
     padding: 16px 0;
-    width:100%;
-    color:white !important;
+    width: 100%;
+    color: white !important;
 }
 
-    .advisor-static .price-card-button:hover{
+    .advisor-static .price-card-button:hover {
         opacity: 0.7;
     }
-    .advisor-static .price-list {
-        align-items: flex-end;
-    }
+
+.advisor-static .price-list {
+    align-items: flex-end;
+}
+
 .advisor-static .best-seller {
     border-radius: 4px 4px 0 0;
     background-color: #EDC054;
-    color:white !important;
-    margin-bottom:0;
-    padding:5px 0;
+    color: white !important;
+    margin-bottom: 0;
+    padding: 5px 0;
 }
-.advisor-static .licences-amount {
+
+.advisor-static .licences-amount, .advisor-static .medium-heading {
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 21px;
     text-align: center;
-    margin-bottom:60px;
-
+    margin-bottom: 60px;
 }
+
 .advisor-static .ostrava-free {
     background: url(./Assets/ostrava.jpg);
     background-position: center;
@@ -661,52 +745,97 @@ h3.in-the-app{
     padding: 50px;
     background-size: 100% 100%;
 }
+
 .advisor-static .for-ostrava {
     font-size: 16px;
     line-height: 24px;
     font-weight: 300;
     border-radius: 10px;
     background-color: #D0021B;
-    color:white;
+    color: white;
     padding: 3px 16px;
-
 }
+
 .advisor-static .ostrava-package {
     font-size: 48px;
     font-weight: 600;
     line-height: 48px;
-    color:white;
-    margin-top:40px;
-    margin-bottom:20px;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
+
 .advisor-static .unlimited-licences {
     font-size: 24px;
     font-weight: 600;
     line-height: 48px;
-    color:white;
-
+    color: white;
 }
+
 .advisor-static .not-included {
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
-    color:white;
-    margin-bottom:20px;
+    color: white;
+    margin-bottom: 20px;
 }
+
 .advisor-static .limited-offer {
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
     padding: 16px 20px;
 }
+
 .advisor-static .cards {
-    color: #EDC054;
+    color: #EDC054 !important;
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
-    text-decoration:underline;
-
+    text-decoration: underline;
 }
-    .advisor-static .cards:hover {
-        color: #0072CA;
-    }
+
+.advisor-static .cards:hover {
+    color: #0072CA !important;
+}
+.advisor-static .steps {
+    width: 62px;
+    border: 1px solid #DEDEDE;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    line-height: 60px;
+    color: #9B9B9B;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 900;
+}
+.steps-text {
+    color: #9B9B9B;
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 20px;
+}
+.advisor-static .whats-next {
+    color: #9B9B9B;
+    font-size: 18px;
+    letter-spacing: -0.16px;
+    line-height: 40px;	
+    text-align: center;
+}
+.advisor-static .panel-title {
+    color: #0072CA;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 70px;
+    border-bottom: 1px solid #D8D8D8;
+    text-transform: uppercase;
+}
+.advisor-static .panel-default:first-child {
+    border-top: 1px solid #D8D8D8;
+}
+html{
+    scroll-behavior: smooth;
+}
